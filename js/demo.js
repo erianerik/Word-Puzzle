@@ -1,8 +1,4 @@
 // ----------------------------------------------------------------------------
-// All right reserved
-// Copyright (C) 2012 Garmd Motion Code
-// http://www.garmd.com/
-// ----------------------------------------------------------------------------
 // Yes, we make magic!
 // ----------------------------------------------------------------------------
 
@@ -39,6 +35,8 @@ var winSound = new buzz.sound('sounds/win'),
     alphabet = 'abcdefghijklmnopqrstuvwxyz'.split(''),
     scoreBest = 0,
     scorePlayer = 0;
+
+    
 
 
 for (var i in alphabet) {
@@ -182,14 +180,17 @@ $(function () {
 
                     if (score == modelLetters.length) {
                         winGame();
+                        
                     }
                 } else {
                     ui.draggable.draggable('option', 'revert', true);
-
+                   
                     errorSound.play();
+                   
 
                     setTimeout(function () {
                         ui.draggable.draggable('option', 'revert', false);
+                       
                     }, 100);
                 }
             }
@@ -210,7 +211,7 @@ $(function () {
 
         scoreBest += 1;
 
-        $(" h2 + p ").show();
+        $(" .more ").show();
         localStorage.setItem("bestScore", scoreBest)
 
 

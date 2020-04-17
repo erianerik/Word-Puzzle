@@ -10,7 +10,7 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 102vh;
-	background-image: url("../img/background/back.png");
+	background-image: url(../img/background/backGame2.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -77,7 +77,7 @@ body {
 #container {
 	width: 800px;
 	height: 550px;
-	margin: 40px auto 0 auto;
+	margin: 100px auto 0 auto;
 	position: relative;
 	padding: 50px 0 0 0;
 	z-index: 0;

@@ -1,5 +1,4 @@
 
-
 if (!window.localStorage.getItem("name")) {
     $("#button-send").click(function () {
 
@@ -26,6 +25,7 @@ if (!window.localStorage.getItem("name")) {
     $(".insert-name").hide();
     $("#container ul + h2").html("Nome: " + localStorage.getItem("name"));
 
+    
     if (!window.localStorage.getItem("bestScore")) {
 
     } else {
