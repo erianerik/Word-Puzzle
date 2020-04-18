@@ -51,8 +51,8 @@ a:visited {
 
         .drop-settings {
             position: absolute;
-            right: 125px;
-            top: 120px;
+            right: 200px;
+            top: 50px;
             display: none;
         }
 
@@ -71,7 +71,12 @@ a:visited {
                 top: -30px;
                 right: 10px
             }
-                .seta span {
+            .seta-left {
+                position: absolute;
+                top: 0px;
+                left: 225px;
+            }
+                .seta span, .seta-left span {
                     font-size: 40px;
                     color: #fff;
                 }
