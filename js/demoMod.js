@@ -26,12 +26,10 @@ if (!window.localStorage.getItem("name")) {
     $("#container ul + h2").html("Nome: " + localStorage.getItem("name"));
 
 
-    if (!window.localStorage.getItem("bestScore")) {
-
-    } else {
+    if (window.localStorage.getItem("bestScore")) {
         $(".list-score").html("<li>" + localStorage.getItem("name") + " " + localStorage.getItem("bestScore") + "</li>");
-    }
 
+    }
 }
 
 // Como jogar

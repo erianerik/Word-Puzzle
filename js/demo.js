@@ -33,10 +33,9 @@ var winSound = new buzz.sound('sounds/win'),
     errorSound = new buzz.sound('sounds/error'),
     alphabetSounds = {},
     alphabet = 'abcdefghijklmnopqrstuvwxyz'.split(''),
-    scoreBest = 0,
     scorePlayer = 0;
 
-    
+
 
 
 for (var i in alphabet) {
@@ -180,17 +179,17 @@ $(function () {
 
                     if (score == modelLetters.length) {
                         winGame();
-                        
+
                     }
                 } else {
                     ui.draggable.draggable('option', 'revert', true);
-                   
+
                     errorSound.play();
-                   
+
 
                     setTimeout(function () {
                         ui.draggable.draggable('option', 'revert', false);
-                       
+
                     }, 100);
                 }
             }
@@ -198,22 +197,17 @@ $(function () {
     }
 
     function winGame() {
+
+        winSound.play();
         scorePlayer += 1;
         localStorage.setItem("Score", scorePlayer)
-        
-        winSound.play();
-        
-        if (localStorage.getItem("Score") > localStorage.getItem("bestScore")) {
-            $(".list-score").html("<li>" + localStorage.getItem("name") + " " + localStorage.getItem("Score") +"</li>")
+
+        if ( scorePlayer > localStorage.getItem("bestScore")) {
+            localStorage.setItem("bestScore", scorePlayer)
+            $(".list-score").html("<li>" + localStorage.getItem("name") + " " + localStorage.getItem("bestScore") + "</li>")
         }
 
-      
-
-        scoreBest += 1;
-
         $(" .more ").show();
-        localStorage.setItem("bestScore", scoreBest)
-
 
         $("#container a + h2").html("Pontuação: " + window.localStorage.getItem("Score"));
 
