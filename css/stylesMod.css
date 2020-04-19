@@ -105,6 +105,16 @@ a:visited {
                 background-size: cover;
             }
 
+            .no-points {
+                display: none;
+                animation-name: no-points-anima;
+                animation-duration: 5s;
+
+                color: tomato;
+                position: absolute;
+                top: 50px;
+                right: 100px;
+            }
 
         .drop-settings li:hover {
             cursor: pointer;
@@ -296,16 +306,6 @@ a:visited {
 }
 
 
-.less {
-    position: absolute;
-    top: 0px;
-    right: -244px;
-    animation-name: score-anima-less;
-    animation-duration: 3s;
-    opacity: 0;
-    color: tomato;
-}
-
 .more {
     position: absolute;
     top: -20px;
@@ -332,16 +332,17 @@ a:visited {
     }
 }
 
-@keyframes score-anima-less {
+@keyframes no-points-anima {
     0% {
         opacity: 1;
-        transform: translateY(10px);
+        transform: translateY(-30px);
     }
     50% {
-        transform: translateY(20px);
+        transform: translateY(-40px);
     }
     100% {
-        transform: translateY(20px);
+        transform: translateY(-40px);
         opacity: 0;
+        display: none;
     }
 }

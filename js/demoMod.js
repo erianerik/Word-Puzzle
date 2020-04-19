@@ -28,7 +28,6 @@ if (!window.localStorage.getItem("name")) {
 
     if (window.localStorage.getItem("bestScore")) {
         $(".list-score").html("<li>" + localStorage.getItem("name") + " " + localStorage.getItem("bestScore") + "</li>");
-
     }
 }
 
@@ -50,5 +49,19 @@ $(".next").click(function () {
     if (aux > 4) {
         $(".how-to-play").hide();
         aux = 0
+    }
+})
+
+// Marketplace 
+
+$(" #new-level").click(function(){
+    if(localStorage.getItem("bestScore") >= 20 ){
+        $(this).attr("href","#")
+    }else {
+        setTimeout(function(){
+            $(".no-points").hide()
+        }, 3000);
+        $(".no-points").show()
+        
     }
 })
