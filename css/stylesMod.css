@@ -12,6 +12,9 @@ a {
 a:visited {
     color: inherit;
 }
+
+/* Menu */
+
 .options{
     margin: 10px 50px;
     text-align: right;
@@ -28,12 +31,16 @@ a:visited {
         height: 30px;
         margin: 50px 20px;
         }
-        
+
         .menu-options li:nth-child(1):hover > ul {
             display: inherit;
         }
         .menu-options li:nth-child(2):hover > ul {
             display: inherit;
+        }
+
+        .menu-options li:nth-child(1){
+            width: 100px;
         }
         
         .box-padron {
@@ -103,7 +110,53 @@ a:visited {
             cursor: pointer;
         }
         
+/* How to play */
 
+.how-to-play {
+    width: 50%;
+    height: 40vh;
+    z-index: 1;    
+    border-radius: 20px;
+    background-color: #fff;
+    background-image: url(../img/background/owl-how-to-play.png);
+    background-position: 90% 80%;
+    background-repeat: no-repeat;
+    background-size: 30%;
+
+    position: absolute;
+    top: 20%;
+    left: 27%;
+
+    display: none;
+}
+    .how-to-play h2{
+        text-align: center;
+        font-size: 45px ;
+    }
+    .how-to-play p{
+        width: 65%;
+        text-align: left;
+        padding: 0px 25px;
+        font-size: 18px ;
+        margin:0;
+    }
+    .how-to-play-content {
+        display: flex;
+        flex-direction: column; 
+    }
+    
+    .how-to-play-content a {
+        text-align: center;
+        width: 22%;
+        font-size: 20px;
+        color: #fff;
+        border-radius: 20px;
+        margin-left: 40%;
+        background-color: #000;
+    }
+
+
+/* Tela inicio */
 
 .content-main {
     display: flex;
@@ -187,15 +240,28 @@ a:visited {
 
 #container .style-box {
     display: inline-block;
-    width: 30%;
+    width: 33%;
     height: 60px;
     padding: 8px 22px;
     background: #fff;
     border-radius: 50px;
-    /* margin: 0; */
     font-size: 30px;
     box-sizing: border-box;
 }
+    .box-score {
+        display: inline-block;
+        width: 32%;
+        height: 60px;
+        padding: 8px 22px;
+        background: #fff;
+        border-radius: 50px;
+        font-size: 30px;
+        box-sizing: border-box;
+
+        position: absolute;
+        top: 0;
+        right: -300px;
+    }
 
 #container ul+h2 {
     width: 28%;
@@ -217,8 +283,6 @@ a:visited {
     position: absolute;
     top: 100px;
     left: -354px;
-    /* 
-    display: none; */
 }
 
 .best-score h2 {
@@ -231,13 +295,6 @@ a:visited {
     font-size: 30px;
 }
 
-#container a+h2 {
-    width: 35%;
-    position: absolute;
-    top: 0;
-    right: -300px;
-    background-color: tomato;
-}
 
 .less {
     position: absolute;

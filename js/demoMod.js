@@ -1,4 +1,4 @@
-
+// Inicial;
 if (!window.localStorage.getItem("name")) {
     $("#button-send").click(function () {
 
@@ -25,11 +25,32 @@ if (!window.localStorage.getItem("name")) {
     $(".insert-name").hide();
     $("#container ul + h2").html("Nome: " + localStorage.getItem("name"));
 
-    
+
     if (!window.localStorage.getItem("bestScore")) {
 
     } else {
-        $(".list-score").html("<li>" + localStorage.getItem("name") + " " +localStorage.getItem("bestScore") + "</li>");
+        $(".list-score").html("<li>" + localStorage.getItem("name") + " " + localStorage.getItem("bestScore") + "</li>");
     }
 
 }
+
+// Como jogar
+
+textHowPlay = ["Frase 1", "Frase 2", "Frase 3", "Frase 4"];
+var aux = 0;
+
+$(".how-to-play-call").click(function () {
+    $(".how-to-play").show();
+    $(" .how-to-play-content p").html(textHowPlay[aux]);
+})
+
+
+
+$(".next").click(function () {
+    $(" .how-to-play-content p").html(textHowPlay[aux]);
+    aux += 1;
+    if (aux > 4) {
+        $(".how-to-play").hide();
+        aux = 0
+    }
+})
