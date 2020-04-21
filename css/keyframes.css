@@ -1,0 +1,55 @@
+/* Key Frames */
+
+@keyframes conteiner-animation {
+    0% {
+        transform: translateY(-40%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes score-animation-more {
+    0% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+
+@keyframes no-points-animation {
+    0% {
+        opacity: 1;
+        transform: translateY(-40px);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(-50px);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes how-to-play-animation {
+    0% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+

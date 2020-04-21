@@ -81,7 +81,12 @@ body {
 	position: relative;
 	padding: 50px 0 0 0;
 	z-index: 0;
+
+	animation-name: conteiner-animation;
+	animation-duration: 3s;
 }
+
+	
 
 #models {
 	margin: 0 auto;

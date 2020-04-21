@@ -39,6 +39,8 @@ var aux = 0;
 $(".how-to-play-call").click(function () {
     $(".how-to-play").show();
     $(" .how-to-play-content p").html(textHowPlay[aux]);
+    $("#container").hide()
+    $("#footer").hide()
 })
 
 
@@ -48,6 +50,8 @@ $(".next").click(function () {
     aux += 1;
     if (aux > 4) {
         $(".how-to-play").hide();
+        $("#container").show()
+        $("#footer").show()
         aux = 0
     }
 })
