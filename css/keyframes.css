@@ -15,6 +15,15 @@
     }
 }
 
+@keyframes how-to-play-animation {
+    0% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 @keyframes score-animation-more {
     0% {
         opacity: 1;
@@ -43,13 +52,3 @@
         display: none;
     }
 }
-
-@keyframes how-to-play-animation {
-    0% {
-        transform: translateX(50%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-

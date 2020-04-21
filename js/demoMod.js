@@ -5,7 +5,6 @@ if (!window.localStorage.getItem("name")) {
         console.log("Foi")
         // Pegando conteudo do input
         var namePlayer = $(".namePlayer").val();
-
         window.localStorage.setItem("name", namePlayer);
 
         // alterando a "Caixa" que vai exibir
@@ -31,7 +30,7 @@ if (!window.localStorage.getItem("name")) {
     }
 }
 
-// Como jogar
+// How to Play
 
 textHowPlay = ["Frase 1", "Frase 2", "Frase 3", "Frase 4"];
 var aux = 0;
@@ -55,6 +54,16 @@ $(".next").click(function () {
         aux = 0
     }
 })
+
+// Reset name 
+
+$("#reset-name").click(function(){
+    var newName =  prompt("Digite seu nome...");
+    console.log(newName)
+    window.localStorage.setItem("name", newName);
+    location.reload();
+})
+
 
 // Marketplace 
 

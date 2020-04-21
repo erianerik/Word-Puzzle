@@ -1,3 +1,5 @@
+/* ****** Basic definitions ****** */
+
 ul {
     list-style: none;
     padding: 0;
@@ -13,163 +15,8 @@ a:visited {
     color: inherit;
 }
 
-/* Menu */
 
-.options{
-    margin: 10px 50px;
-    text-align: right;
-    z-index: 1;
-}
-    .menu-options-itens {
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    .icon-options {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        margin: 50px 20px;
-        }
-
-        .menu-options li:nth-child(1):hover > ul {
-            display: inherit;
-        }
-        .menu-options li:nth-child(2):hover > ul {
-            display: inherit;
-        }
-
-        .menu-options li:nth-child(1){
-            width: 100px;
-        }
-        
-        .box-padron {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            width: 15%;
-            height: 10vh;
-            font-size: 25px;
-            border-radius: 10px;
-            background-color: #fff;
-            z-index: 1;
-
-        }
-
-        .drop-settings {
-            position: absolute;
-            right: 200px;
-            top: 50px;
-            display: none;
-        }
-
-        .new-game {
-            width: 23%;
-            height: 20vh;
-
-
-            position: absolute;
-            top: 120px;
-            right: 55px;
-            display: none;
-        }
-            .seta {
-                position: absolute;
-                top: -30px;
-                right: 10px
-            }
-            .seta-left {
-                position: absolute;
-                top: 0%;
-                left: 95%;
-            }
-                .seta span, .seta-left span {
-                    font-size: 40px;
-                    color: #fff;
-                }
-
-            .new-game h2 {
-                margin: 10px 0;
-            }
-
-            .new-game a {
-                display: inline-block;
-                width: 80%;
-                height: 5vh;
-                margin: 10px auto;
-                color: #fff;
-                border-radius: 10px;
-                background-image: url(../img/background/mercado-back-menu.jpg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-
-            .no-points {
-                display: none;
-                color: tomato;
-                animation-name: no-points-animation;
-                animation-duration: 5s;
-
-                position: absolute;
-                top: 40%;
-                left: 20%;
-                transform: translate(-40%, -20%)
-            }
-
-        .drop-settings li:hover {
-            cursor: pointer;
-        }
-        
-/* How to play */
-
-.how-to-play {
-    display: none;
-    width: 50%;
-    height: 40vh;
-    z-index: 1;    
-    border-radius: 20px;
-    background-color: #fff;
-    background-image: url(../img/background/owl-how-to-play.png);
-    background-position: 90% 80%;
-    background-repeat: no-repeat;
-    background-size: 30%;
-
-    position: absolute;
-    top: 20%;
-    left: 27%;
-
-    animation-name: how-to-play-animation;
-    animation-duration: 1.5s;
-}
-    .how-to-play h2{
-        text-align: center;
-        font-size: 45px ;
-    }
-    .how-to-play p{
-        width: 65%;
-        text-align: left;
-        padding: 0px 25px;
-        font-size: 18px ;
-        margin:0;
-    }
-    .how-to-play-content {
-        display: flex;
-        flex-direction: column; 
-    }
-    
-    .how-to-play-content a {
-        text-align: center;
-        width: 22%;
-        font-size: 20px;
-        color: #fff;
-        border-radius: 20px;
-        margin-left: 40%;
-        background-color: #000;
-    }
-
-
-/* Tela inicio */
+/* ****** Tela inicio ****** */
 
 .content-main {
     display: flex;
@@ -255,20 +102,181 @@ a:visited {
     background-image: linear-gradient(315deg, #00bfb2 0%, #028090 74%);
 }
 
-#container .style-box {
+
+
+/* ****** Menu ****** */
+
+.options{
+    margin: 10px 50px;
+    text-align: right;
+    z-index: 1;
+}
+    .menu-options-itens {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .icon-options {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: 50px 20px;
+        }
+
+        .menu-options li:nth-child(1):hover > ul {
+            display: inherit;
+        }
+        .menu-options li:nth-child(2):hover > ul {
+            display: inherit;
+        }
+
+        .menu-options li:nth-child(1){
+            width: 100px;
+        }
+        
+        .box-padron {
+            box-sizing: border-box;
+            text-align: center;
+            width: 15%;
+            height: auto;
+            padding: 10px;
+            font-size: 25px;
+            border-radius: 10px;
+            background-color: #fff;
+            z-index: 1;
+
+        }
+
+        .drop-settings {
+            display: none;
+            
+            position: absolute;
+            right: 200px;
+            top: 50px;
+        }
+
+        .new-game {
+            width: 23%;
+            height: auto;
+
+
+            position: absolute;
+            top: 120px;
+            right: 55px;
+            display: none;
+        }
+            .seta {
+                position: absolute;
+                top: -30px;
+                right: 10px
+            }
+            .seta-left {
+                position: absolute;
+                top: 0%;
+                left: 95%;
+            }
+                .seta span, .seta-left span {
+                    font-size: 40px;
+                    color: #fff;
+                }
+
+            .new-game h2 {
+                margin: 10px 0;
+            }
+
+            .new-game a {
+                display: inline-block;
+                width: 80%;
+                height: 5vh;
+                margin: 10px auto;
+                color: #fff;
+                border-radius: 10px;
+                background-image: url(../img/background/mercado-back-menu.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .no-points {
+                display: none;
+                color: tomato;
+                animation-name: no-points-animation;
+                animation-duration: 5s;
+
+                position: absolute;
+                top: 40%;
+                left: 20%;
+                transform: translate(-40%, -20%)
+            }
+
+        .drop-settings li:hover {
+            cursor: pointer;
+        }
+        
+/* ****** How to play ****** */
+
+.how-to-play {
+    display: none;
+    width: 50%;
+    height: 40vh;
+    z-index: 1;    
+    border-radius: 20px;
+    background-color: #fff;
+    background-image: url(../img/background/owl-how-to-play.png);
+    background-position: 90% 80%;
+    background-repeat: no-repeat;
+    background-size: 30%;
+
+    position: absolute;
+    top: 20%;
+    left: 27%;
+
+    animation-name: how-to-play-animation;
+    animation-duration: 1.5s;
+}
+    .how-to-play h2{
+        text-align: center;
+        font-size: 45px ;
+    }
+    .how-to-play p{
+        width: 65%;
+        text-align: left;
+        padding: 0px 25px;
+        font-size: 18px ;
+        margin:0;
+    }
+    .how-to-play-content {
+        display: flex;
+        flex-direction: column; 
+    }
+    
+    .how-to-play-content a {
+        text-align: center;
+        width: 22%;
+        font-size: 20px;
+        color: #fff;
+        border-radius: 20px;
+        margin-left: 40%;
+        background-color: #000;
+    }
+
+/* ****** My implementations in the container
+        * Insert name, score and best score ******  */
+
+#container .style-box-name {
+    box-sizing: border-box;
     display: inline-block;
-    width: 33%;
+    width: auto;
     height: 60px;
     padding: 8px 22px;
     background: #fff;
     border-radius: 50px;
     font-size: 30px;
-    box-sizing: border-box;
 }
     .box-score {
         display: inline-block;
-        width: 32%;
-        height: 60px;
+        width: auto;
+        height: auto;
         padding: 8px 22px;
         background: #fff;
         border-radius: 50px;
